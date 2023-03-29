@@ -1,10 +1,11 @@
 import React from 'react'
+import { cartToDb } from '../Cosmatics/utilities/fakedb'
 import './cosmatic.css' 
 const Cosmatic = (props) => {
     // Here need Destucturing to remove long variable pass in element
     const {name,price,id}=props.cosmatic
     const addtoProduct=(id)=>{
-        localStorage.setItem(id,1)
+       cartToDb(id)
     }
 
     const addToCartWithParameter=()=>addtoProduct(id);
