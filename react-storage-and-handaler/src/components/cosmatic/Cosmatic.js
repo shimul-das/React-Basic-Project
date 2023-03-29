@@ -4,8 +4,9 @@ const Cosmatic = (props) => {
     // Here need Destucturing to remove long variable pass in element
     const {name,price,id}=props.cosmatic
     const addtoProduct=(id)=>{
-        console.log('Product Added',id)
+        localStorage.setItem(id,1)
     }
+
     const addToCartWithParameter=()=>addtoProduct(id);
   return (
     <div className='product'>
