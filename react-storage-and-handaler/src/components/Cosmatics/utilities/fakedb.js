@@ -52,5 +52,10 @@ const removeFromDb=(id)=>{
 const deleteShoppingCart=()=>{
     localStorage.removeItem('shoping-cart')
 }
+const getTotalPrice=(products)=>{
+const reducer=(previous,current)=>previous+current.price;
+const total=products.reduce(reducer,0);
+return total;
+}
 
-export {cartToDb, removeFromDb,deleteShoppingCart}
+export {cartToDb, removeFromDb,deleteShoppingCart,getTotalPrice}
